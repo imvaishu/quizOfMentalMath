@@ -1,0 +1,15 @@
+[
+  { "question": "What is the product of 25 and 35 ?", "answer": "875" },
+  { "question": "What is the remainder of 341 and 17 ?", "answer": "1" },
+  { "question": "What is the quotient of 345 and 30 ?", "answer": "11" },
+  { "question": "What is the addition of 25 and 35 ?", "answer": "60" },
+  { "question": "What is the square of 23 ?", "answer": "529" },
+  { "question": "What is the cube of 15 ?", "answer": "3375" },
+  { "question": "What is the square Root of 841 ?", "answer": "29" },
+  { "question": "What is the cube root of 1331 ?", "answer": "11" },
+  { "question": "What is the value  of 5^5 ?", "answer": "3125" },
+  {
+    "question": "What is the diffrence of 2^7 and 3^4 ?",
+    "answer": "47 "
+  }
+]
