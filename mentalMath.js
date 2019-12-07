@@ -1,12 +1,13 @@
 const { stdin, exit } = process;
 const questionList = require("./questions.json");
+const chalk = require("chalk");
 
 const displayQuestion = function(questionList, questionNo) {
-  console.log(questionList[questionNo].question);
+  console.log(chalk.yellow(questionList[questionNo].question));
 };
 
-const isCorrectAnswer = function(answer, questionList, qNo) {
-  return +questionList[qNo].answer == answer;
+const isCorrectAnswer = function(usrResponse, questionList, qNo) {
+  return +questionList[qNo].answer == usrResponse;
 };
 
 const main = function(questionList) {
@@ -14,20 +15,27 @@ const main = function(questionList) {
   let score = 0;
   displayQuestion(questionList, questionNo);
 
-  stdin.on("data", answer => {
+  stdin.setEncoding("utf-8");
+  stdin.on("data", usrResponse => {
     let message = `Incorrect Answer\t Score: ${score}`;
-    if (isCorrectAnswer(answer, questionList, questionNo)) {
+    message = chalk.red(message);
+    if (isCorrectAnswer(usrResponse, questionList, questionNo)) {
       message = `Correct Answer\t Score: ${++score}`;
+      message = chalk.green(message);
     }
 
     console.log(message);
     if (questionNo == questionList.length - 1) {
-      console.log("Quiz Over");
+      console.log(chalk.magenta("Quiz Over"));
       exit();
     }
 
     displayQuestion(questionList, ++questionNo);
   });
+  setTimeout(() => {
+    console.log("Time Out");
+    exit();
+  }, 500000);
 };
 
 main(questionList);

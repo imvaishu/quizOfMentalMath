@@ -1,0 +1,23 @@
+{
+  "name": "quizgame",
+  "version": "1.0.0",
+  "description": "maths quiz questions",
+  "main": "mentalMath.js",
+  "scripts": {
+    "start": "node mentalMath.js"
+  },
+  "dependencies": {
+    "say": "0.16.0",
+    "chalk": "3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imvaishu/quizOfMentalMath.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imvaishu/quizOfMentalMath/issues"
+  },
+  "homepage": "https://github.com/imvaishu/quizOfMentalMath#readme"
+}
